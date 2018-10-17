@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+<!-- <div class="app"> -->
+<div class="container-fluid">    
+    <h1>Hello World!</h1>
+    <p>Resize the browser window to see the effect.</p>
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <div class="articulos">
+
+            </div>    
+                <nav aria-label="Page navigation">
+                  <ul class="pagination">
+                    <li>
+                      <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                      <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+
+
+    $.getJSON('https://www.llamadaapi.json', function(data) {
+      var articulos = data['articles'];
+
+        //titulo = $('h2');
+
+
+        var j = 0;
+        for (var i = 0; i < articulos.length; i++) {
+            if (articulos[i]['lang'] == 'es') {
+                $('.articulos').append("<h4/>");
+                //$(titulo[j]).text(articulos[i]['title']);
+                j++;    
+            }
+        }
+
+        j = 0;
+        titulo = $('h4');
+        for (var i = 0; i < articulos.length; i++) {
+            if (articulos[i]['lang'] == 'es') {
+
+                $(titulo[j]).text(articulos[i]['title']);
+                j++;
+            }
+        }
+
+    });
+</script>
+</html>
