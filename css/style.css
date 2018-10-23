@@ -21,7 +21,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  margin-bottom: 65px;
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -92,7 +92,7 @@ a {
 }
 
 section {
-  padding: 85px 0;
+  padding: 10px 0;
 }
 
 .card {
@@ -589,7 +589,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .feature-col {
   display: table;
-  padding-bottom: 45px;
+  /*padding-bottom: 45px;*/
 }
 
 .feature-col > div > div {
@@ -962,6 +962,38 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* ==================================================
+  Estilos JRP
+  ================================================== */
+
+.jrp
+{
+  font-family: "sallita";
+  color: #7CC142;
+}
+
+.jrp1
+{
+  font-family: "sallita";
+  color: #7CC142;
+  font-size: 60px
+}
+
+.jrp2
+{
+  font-family: "sallita";
+  font-size: 110px;
+  color: #7CC142;
+  margin: 0;
+  padding: 10px;
+}
+
+@font-face 
+{
+  font-family:"sallita";
+  src: url(./fonts/sallita/sallita.ttf);
+}
+
+/* ==================================================
   Responsive Styling
   ================================================== */
 @media (max-width: 61.9em) {
@@ -1040,6 +1072,28 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-right: 30px;
   }
 }
+
+@media (max-width: 425px) {
+   .jrp
+  {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 375px) {
+   .jrp
+  {
+    font-size: 63px;
+  }
+}
+
+@media (max-width: 320px) {
+   .jrp
+  {
+    font-size: 53px;
+  }
+}
+
 .fondoversiculo{
 	background-image:url(../img/parallax-bg.jpg);
 	background-repeat:no-repeat;
@@ -1145,3 +1199,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .embed-responsive-4by3 {
     padding-bottom: 58%;
 }
+
+
+
+
