@@ -185,9 +185,8 @@ a:hover {
   height: 70px;
 }
 
-#header-chasco {
-  background: #169B9A;
-  height: 70px;
+.header-chasco {
+  background: #169B9A !important;
 }
 
 #header #logo {
@@ -261,6 +260,15 @@ a:hover {
 #header .social-nav a:hover {
   color: rgba(255, 255, 255, 0.75);
 }
+
+.campus1 {
+	background-color: #169B9A;
+	font-weight:bold !important;
+	}
+.campus2 {
+	background-color: #7CC142;
+	font-weight:bold !important;
+	}
 
 /*--------------------------------------------------------------
 # Carousel
